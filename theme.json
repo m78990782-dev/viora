@@ -1,0 +1,72 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 2,
+	"settings": {
+		"appearanceTools": true,
+		"useRootPaddingAwareAlignments": false,
+		"layout": {
+			"contentSize": "900px",
+			"wideSize": "1320px"
+		},
+		"color": {
+			"custom": true,
+			"customDuotone": false,
+			"defaultPalette": false,
+			"defaultGradients": false,
+			"palette": [
+				{ "slug": "primary", "color": "#6C45C7", "name": "بنفش VIORA" },
+				{ "slug": "deep", "color": "#3D237A", "name": "بنفش تیره" },
+				{ "slug": "lavender", "color": "#B9A5F5", "name": "یاسی" },
+				{ "slug": "soft", "color": "#EDE7FF", "name": "یاسی روشن" },
+				{ "slug": "pink", "color": "#E6B9FF", "name": "صورتی ملایم" },
+				{ "slug": "background", "color": "#F8F6FF", "name": "پس‌زمینه" },
+				{ "slug": "white", "color": "#FFFFFF", "name": "سفید" },
+				{ "slug": "ink", "color": "#17131F", "name": "مشکی" }
+			],
+			"gradients": [
+				{
+					"slug": "primary",
+					"name": "بنفش به یاسی",
+					"gradient": "linear-gradient(135deg, #6C45C7 0%, #B9A5F5 100%)"
+				},
+				{
+					"slug": "deep",
+					"name": "بنفش تیره به بنفش",
+					"gradient": "linear-gradient(140deg, #3D237A 0%, #6C45C7 100%)"
+				},
+				{
+					"slug": "soft",
+					"name": "یاسی به صورتی",
+					"gradient": "linear-gradient(135deg, #B9A5F5 0%, #E6B9FF 100%)"
+				}
+			]
+		},
+		"typography": {
+			"customFontSize": true,
+			"lineHeight": true,
+			"dropCap": false,
+			"fontFamilies": [
+				{
+					"slug": "vazirmatn",
+					"name": "Vazirmatn",
+					"fontFamily": "\"Vazirmatn\", \"Vazir\", \"IRANSans\", \"Segoe UI\", Tahoma, system-ui, sans-serif"
+				}
+			],
+			"fontSizes": [
+				{ "slug": "small", "size": "0.88rem", "name": "کوچک" },
+				{ "slug": "medium", "size": "1rem", "name": "متوسط" },
+				{ "slug": "large", "size": "1.25rem", "name": "بزرگ" },
+				{ "slug": "x-large", "size": "1.75rem", "name": "خیلی بزرگ" }
+			]
+		},
+		"spacing": {
+			"units": ["px", "rem", "%", "vw", "vh"]
+		},
+		"border": {
+			"radius": true,
+			"color": true,
+			"style": true,
+			"width": true
+		}
+	}
+}

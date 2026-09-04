@@ -1,0 +1,158 @@
+/*
+Theme Name: VIORA
+Author: VIORA Studio
+Description: پوسته‌ی حرفه‌ای فروشگاه مد و پوشاک VIORA — راست‌چین و فارسی‌محور، کاملاً سازگار با ووکامرس، با رابط کاربری شیشه‌ای، کارت‌های محصول سه‌بعدی، حالت تاریک و انیمیشن‌های بهینه.
+Version: 1.7.1
+Requires at least: 6.2
+Tested up to: 7.1
+Requires PHP: 8.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: viora
+Tags: e-commerce, rtl-language-support, custom-colors, custom-logo, custom-menu, featured-images, translation-ready, full-width-template, theme-options, block-styles, wide-blocks, threaded-comments, footer-widgets
+
+VIORA is distributed under the terms of the GNU GPL v2 or later.
+
+NOTE
+----
+The visual layer lives in assets/css/ (base.css, components.css, home.css, woocommerce.css)
+and is enqueued from inc/enqueue.php. This file only carries the theme header plus the
+WordPress core compatibility rules that must ship inside style.css.
+
+BEFORE PUBLISHING
+-----------------
+Add your own `Theme URI:` and `Author URI:` lines to the header above (both optional in
+WordPress, so the theme is valid without them). Keep `Version:` here identical to
+VIORA_VERSION in functions.php.
+*/
+
+/* -------------------------------------------------------------------------
+ * WordPress core compatibility
+ * ---------------------------------------------------------------------- */
+
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	word-wrap: normal !important;
+}
+
+.screen-reader-text:focus {
+	background-color: #fff;
+	border-radius: 999px;
+	box-shadow: 0 0 2px 2px rgba(108, 69, 199, 0.35);
+	clip: auto !important;
+	clip-path: none;
+	color: #3d237a;
+	display: block;
+	font-size: 0.9rem;
+	font-weight: 700;
+	height: auto;
+	right: 1rem;
+	line-height: normal;
+	padding: 0.75rem 1.25rem;
+	text-decoration: none;
+	top: 1rem;
+	width: auto;
+	z-index: 100000;
+}
+
+.skip-link {
+	position: absolute;
+	right: -9999px;
+	top: 0;
+}
+
+.alignleft {
+	float: left;
+	margin: 0.5rem 1.5rem 1rem 0;
+}
+
+.alignright {
+	float: right;
+	margin: 0.5rem 0 1rem 1.5rem;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin: 1.5rem auto;
+}
+
+.alignwide {
+	margin-inline: calc(50% - 50vw + 2rem);
+	max-width: 100vw;
+}
+
+.alignfull {
+	margin-inline: calc(50% - 50vw);
+	max-width: 100vw;
+}
+
+.wp-caption {
+	margin-bottom: 1.5rem;
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin: 0;
+}
+
+.wp-caption-text,
+.wp-block-image figcaption {
+	color: var(--viora-muted, #6b6480);
+	font-size: 0.85rem;
+	padding: 0.6rem 0.25rem 0;
+	text-align: center;
+}
+
+.sticky .viora-entry__title::after {
+	content: " ★";
+	color: var(--viora-primary, #6c45c7);
+}
+
+.bypostauthor > .comment-body {
+	position: relative;
+}
+
+.gallery {
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(var(--viora-gallery-cols, 3), minmax(0, 1fr));
+	margin-bottom: 1.5rem;
+}
+
+.gallery-columns-1 { --viora-gallery-cols: 1; }
+.gallery-columns-2 { --viora-gallery-cols: 2; }
+.gallery-columns-4 { --viora-gallery-cols: 4; }
+.gallery-columns-5 { --viora-gallery-cols: 5; }
+.gallery-columns-6 { --viora-gallery-cols: 6; }
+
+.gallery-item {
+	margin: 0;
+}
+
+.gallery-item img {
+	border-radius: 18px;
+	display: block;
+	height: auto;
+	width: 100%;
+}
+
+/* Admin bar must not hide the floating header. */
+body.admin-bar-visible .viora-header {
+	top: calc(var(--viora-header-offset, 1.25rem) + 32px);
+}
+
+@media screen and (max-width: 782px) {
+	body.admin-bar-visible .viora-header {
+		top: calc(var(--viora-header-offset, 1.25rem) + 46px);
+	}
+}
