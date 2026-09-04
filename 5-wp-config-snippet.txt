@@ -1,0 +1,24 @@
+<?php
+/**
+ * VIORA demo — snippet to paste into wp-config.php of the DEMO site.
+ *
+ * Copy the two lines below (not this comment block) into the demo site's
+ * wp-config.php, just above the line that says:
+ *
+ *     /* That's all, stop editing! Happy publishing. *\/
+ *
+ * Why: the demo runs the unencoded build of the theme, so it needs no ionCube
+ * Loader and no marketplace license file. This constant tells the theme's
+ * license gate to stay open. It lives in wp-config.php — outside the theme —
+ * so the product you sell on RTL-Theme is never affected.
+ *
+ * The second constant raises the memory ceiling; the demo importer and the
+ * WooCommerce lookup tables both benefit from it on shared hosting.
+ */
+
+// ---------------- copy from here ----------------
+
+define( 'VIORA_LICENSE_BYPASS', true );
+define( 'WP_MEMORY_LIMIT', '256M' );
+
+// ---------------- copy to here ------------------
